@@ -13,32 +13,32 @@ class TeamSeeder extends Seeder
 
         $members = [
             [
-                'name'       => 'Dr. Robert Nathan',
-                'bio'        => 'Owner',
+                'name'       => 'Nimal Perera',
+                'bio'        => 'Chief Operating Officer',
                 'image_path' => null,
                 'active'     => true,
             ],
             [
-                'name'       => 'Angela Clay',
-                'bio'        => 'Pharmacist',
+                'name'       => 'Sachini Jayawardena',
+                'bio'        => 'Chief Creative Officer',
                 'image_path' => null,
                 'active'     => true,
             ],
             [
-                'name'       => 'Kenzo Abigail',
-                'bio'        => 'Medical Laboratory',
+                'name'       => 'Kasun Rathnayake',
+                'bio'        => 'Chief Marketing Officer',
                 'image_path' => null,
                 'active'     => true,
             ],
             [
-                'name'       => 'Clarine Kitty',
-                'bio'        => 'Cashier',
+                'name'       => 'Dilini Fernando',
+                'bio'        => 'Chief Communication Officer',
                 'image_path' => null,
                 'active'     => true,
             ],
             [
-                'name'       => 'Andrea Cruis',
-                'bio'        => 'Nurse',
+                'name'       => 'Ruwan Seneviratne',
+                'bio'        => 'Chief Legal Officer',
                 'image_path' => null,
                 'active'     => true,
             ],
