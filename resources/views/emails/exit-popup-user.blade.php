@@ -237,9 +237,9 @@
         <div class="footer">
             <div class="footer-brand">C & K Home Nursing and Care Center</div>
             <div class="footer-contacts">
-                <a href="tel:0773768767">077 376 8767</a>
+                <a href="tel:+94773768767">077 376 8767</a>
                 <span class="footer-separator">|</span>
-                <a href="mailto:candkhomenursing17@gmail.com">candkhomenursing17@gmail.com</a>
+                <a href="mailto:info@nursingcare.lk">info@nursingcare.lk</a>
                 <br>
                 <span class="footer-website"><a href="https://nursingcare.lk">nursingcare.lk</a></span>
             </div>

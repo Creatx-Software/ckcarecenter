@@ -36,7 +36,7 @@
                                         <a href="https://www.facebook.com" class="social-item-3">
                                             <i class="fa-brands fa-xs fa-facebook-f"></i>
                                         </a>
-                                        <a href="https://wa.me/ (+94) 077 376 8767" class="social-item-3">
+                                        <a href="https://wa.me/94773768767" class="social-item-3">
                                             <i class="fa-brands fa-xs fa-whatsapp"></i>
                                         </a>
                                         <a href="https://www.instagram.com" class="social-item-3">
@@ -60,7 +60,7 @@
                                             <i class="rtmicon rtmicon-classic-phone fs-4 flex-shrink-0"></i>
                                             <span>(+94) 070 6768767</span>
                                         </a>
-                                        <a href="https://wa.me/ (+94) 077 376 8767" target="_blank" rel="noopener noreferrer" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
+                                        <a href="https://wa.me/94773768767" target="_blank" rel="noopener noreferrer" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
                                             <i class="fa-brands fa-whatsapp fs-4 flex-shrink-0"></i>
                                             <span>(+94) 077 376 8767</span>
                                         </a>

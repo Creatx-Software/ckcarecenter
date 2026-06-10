@@ -92,7 +92,7 @@
                                         class="d-flex flex-column gap-1 p-4 bg-accent-color-3 rounded-4 position-relative">
                                         <h5>Need Urgent Care?</h5>
                                         <p>Our care team is available 24/7. Call immediately </p>
-                                        <a href="tel:0773768767" class="link fw-semibold phone-link">077 376 8767</a>
+                                        <a href="tel:+94773768767" class="link fw-semibold phone-link">077 376 8767</a>
                                         <i class="rtmicon rtmicon-classic-phone position-absolute bottom-0 end-0"
                                             style="font-size: 78px;"></i>
                                     </div>
