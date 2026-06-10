@@ -25,6 +25,8 @@
      @include('frontend.home.team')
      @include('frontend.home.faq')
     @include('frontend.home.carehome')
+    @include('frontend.home.awards')
+    @include('frontend.home.csr')
     @include('frontend.home.blog')
 
 
