@@ -132,7 +132,7 @@
                                 </div>
                                 <h6 style="font-size:15px;font-weight:700;color:var(--text-color);margin:0 0 8px;">Emergency Disaster Relief</h6>
                                 <p style="font-size:13px;color:var(--text-color-2);line-height:1.7;margin:0;">
-                                    November 2025: Providing emergency assistance to individuals affected by natural disasters — floods and drowning incidents.
+                                    November 2025: Providing emergency assistance to individuals affected by natural disasters - floods and drowning incidents.
                                 </p>
                             </div>
                         </div>
