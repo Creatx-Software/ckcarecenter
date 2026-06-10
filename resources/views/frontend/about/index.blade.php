@@ -17,6 +17,7 @@
 @section('content')
     @include('frontend.about.hero')
     @include('frontend.about.about')
+    @include('frontend.about.managing_director')
     @include('frontend.about.why_choose_us')
     @include('frontend.about.services')
     @include('frontend.about.package')
