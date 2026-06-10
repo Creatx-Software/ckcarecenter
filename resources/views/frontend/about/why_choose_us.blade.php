@@ -84,12 +84,11 @@
             <div class="col">
                 <div class="d-flex flex-column gap-3 p-4 bg-accent-color-3 rounded-4 h-100">
                     <div class="icon-box flex-shrink-0" style="width:52px; height:52px;">
-                        <i class="fa-solid fa-star fs-4"></i>
+                        <i class="fa-solid fa-trophy fs-4"></i>
                     </div>
                     <div>
-                        <h5 class="mb-2">Trusted by 500+ Families</h5>
-                        <p class="font-2 m-0">Over a decade of experience and hundreds of families served
-                            — our reputation is built on consistent, compassionate excellence.</p>
+                        <h5 class="mb-2">Award-Winning Care</h5>
+                        <p class="font-2 m-0">Recognised with the Asia Miracle People's Excellency Award and The Entrepreneur Biz Award 2024 — excellence acknowledged by industry and community.</p>
                     </div>
                 </div>
             </div>

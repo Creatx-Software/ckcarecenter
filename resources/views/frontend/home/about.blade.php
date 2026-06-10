@@ -119,8 +119,7 @@
                                     <div
                                         class="d-flex flex-column align-items-xl-start text-white align-items-center gap-2">
                                         <h4 class="m-0">Our Vision</h4>
-                                        <p class="text-white">To be the most trusted home nursing and care provider,
-                                            ensuring dignity, comfort, and quality of life for every individual we serve.</p>
+                                        <p class="text-white">To become the most distinguished healthcare service provider in Sri Lanka, delivering compassionate and professional care that meets international standards.</p>
                                     </div>
                                 </div>
                                 <div
@@ -130,8 +129,7 @@
                                     </div>
                                     <div class="d-flex flex-column align-items-xl-start align-items-center gap-2">
                                         <h4 class="m-0 text-white">Our Mission</h4>
-                                        <p class="text-white">To deliver exceptional, personalized home nursing care
-                                            that enhances well-being and gives complete peace of mind to families.</p>
+                                        <p class="text-white">Maintaining mental and physical well-being in accordance with Sri Lankan and international standards — understanding individual needs, utilising modern technology with experienced staff, and coordinating with qualified doctors and hospital services.</p>
                                     </div>
                                 </div>
                                 <hr class="accent-color-primary">

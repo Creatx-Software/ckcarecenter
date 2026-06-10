@@ -26,11 +26,11 @@
                     <div class="col mb-3">
                         <div class="d-flex flex-column align-items-center text-center">
                             <div class="d-flex">
-                                <h3 class="number accent-color" data-target="25" data-duration="1000">0</h3>
+                                <h3 class="number accent-color" data-target="10" data-duration="1000">0</h3>
                                 <h3 class="accent-color">+</h3>
                             </div>
                             <h5>Years of Service</h5>
-                            <p>Over two decades of delivering trusted, high-quality residential and nursing care with dignity.</p>
+                            <p>Trusted home nursing and care provider since 2016, delivering quality healthcare with dignity and compassion.</p>
                         </div>
                     </div>
                 </div>

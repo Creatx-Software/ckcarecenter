@@ -9,20 +9,19 @@
                                 </div>
                                 <h3>C &amp; K Home Nursing and Care Center</h3>
                                 <p>
-                                    At C &amp; K Home Nursing and Care Center, we are dedicated to providing compassionate,
-                                    professional nursing care and support services in the comfort of your own home.
-                                    With a team of qualified nurses and caregivers, we treat every individual with the
-                                    dignity, respect, and personal attention they deserve.
+                                    Established in June 2016, C &amp; K Nursing Care is a professional healthcare services provider
+                                    operating in Sri Lanka, specialising in nursing and home care solutions. Our registered nurses
+                                    and caregivers treat every individual with the dignity, respect, and personal attention they deserve.
                                 </p>
                                 <p>
                                     From post-operative recovery and chronic illness management to elderly daily care,
-                                    we tailor our services to each client's unique needs — giving families peace of mind
-                                    and residents a higher quality of life.
+                                    we tailor our services to each client's unique needs. Recognised with the Asia Miracle
+                                    People's Excellency Award and The Entrepreneur Biz Award 2024, our commitment to quality is industry-acknowledged.
                                 </p>
                                 <div class="d-flex flex-row gap-4 mt-2">
                                     <div class="d-flex flex-column align-items-center">
-                                        <h3 class="accent-color m-0 fw-bold">10+</h3>
-                                        <span class="text-muted" style="font-size:13px;">Years Experience</span>
+                                        <h3 class="accent-color m-0 fw-bold">Est. 2016</h3>
+                                        <span class="text-muted" style="font-size:13px;">Since June 2016</span>
                                     </div>
                                     <div class="d-flex flex-column align-items-center">
                                         <h3 class="accent-color m-0 fw-bold">500+</h3>
@@ -51,9 +50,7 @@
                                         <div
                                             class="d-flex flex-column align-items-xl-start text-white align-items-center gap-2">
                                             <h4 class="m-0">Our Vision</h4>
-                                            <p class="text-white">To be Sri Lanka's most trusted home nursing and care
-                                                provider — where every patient feels safe, valued, and cared for
-                                                like family.</p>
+                                            <p class="text-white">To become the most distinguished healthcare service provider in Sri Lanka, delivering compassionate and professional care that meets international standards.</p>
                                         </div>
                                     </div>
                                     <div
@@ -63,9 +60,7 @@
                                         </div>
                                         <div class="d-flex flex-column align-items-xl-start align-items-center gap-2">
                                             <h4 class="m-0 text-white">Our Mission</h4>
-                                            <p class="text-white">To deliver professional, compassionate nursing care
-                                                at home — enhancing quality of life, supporting recovery, and bringing
-                                                comfort to those who need it most.</p>
+                                            <p class="text-white">Maintaining mental and physical well-being in accordance with Sri Lankan and international standards — understanding individual needs, utilising modern technology with experienced staff, and coordinating with qualified doctors and hospital services.</p>
                                         </div>
                                     </div>
                                     <hr style="border-color: rgba(255,255,255,0.4);">

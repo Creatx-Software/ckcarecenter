@@ -64,7 +64,7 @@
         "description": "Professional home nursing and elder care services in Piliyandala, Sri Lanka.",
         "url": "https://nursingcare.lk",
         "telephone": "+94773768767",
-        "email": "candkhomenursing17@gmail.com",
+        "email": "info@nursingcare.lk",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "No 50, Kudamaduwa Road, Siddamull",
