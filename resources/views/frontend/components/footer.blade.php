@@ -19,13 +19,24 @@
                                     <h4 style="text-align: left !important;">Address</h4>
                                     <div class="d-flex flex-row font-2 gap-2 align-items-start">
                                         <i class="rtmicon rtmicon-location fs-4 flex-shrink-0 mt-1"></i>
-                                        <span style="text-align: left;">No 50, Kudamaduwa Road, Siddamull, Piliyandala, Kesbewa, Sri Lanka</span>
+                                        <div class="d-flex flex-column gap-1" style="text-align: left;">
+                                            <div>
+                                                <small class="opacity-75 fw-semibold">Head Office</small><br>
+                                                <span>50, Kudamaduwa Road, Piliyandala, Sri Lanka</span>
+                                            </div>
+                                            <div>
+                                                <small class="opacity-75 fw-semibold">Branch Office</small><br>
+                                                <span>Pannipitiya</span><br>
+                                                <span>Athurugiriya</span>
+                                            </div>
+
+                                        </div>
                                     </div>
                                     <div class="social-container team mb-xl-0 mt-1 mb-3 gap-2">
                                         <a href="https://www.facebook.com" class="social-item-3">
                                             <i class="fa-brands fa-xs fa-facebook-f"></i>
                                         </a>
-                                        <a href="https://wa.me/94773768767" class="social-item-3">
+                                        <a href="https://wa.me/ (+94) 077 376 8767" class="social-item-3">
                                             <i class="fa-brands fa-xs fa-whatsapp"></i>
                                         </a>
                                         <a href="https://www.instagram.com" class="social-item-3">
@@ -41,13 +52,21 @@
                                 <div class="d-flex flex-column gap-1" style="text-align: left !important;">
                                     <h4 style="text-align: left !important;">Contact Us</h4>
                                     <div class="d-flex flex-column gap-1">
-                                        <a href="tel:0773768767" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
+                                        <a href="tel:+94773768767" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
                                             <i class="rtmicon rtmicon-classic-phone fs-4 flex-shrink-0"></i>
-                                            <span>077 376 8767</span>
+                                            <span>(+94) 077 376 8767</span>
                                         </a>
-                                        <a href="mailto:candkhomenursing17@gmail.com" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
+                                        <a href="tel:+94706768767" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
+                                            <i class="rtmicon rtmicon-classic-phone fs-4 flex-shrink-0"></i>
+                                            <span>(+94) 070 6768767</span>
+                                        </a>
+                                        <a href="https://wa.me/ (+94) 077 376 8767" target="_blank" rel="noopener noreferrer" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
+                                            <i class="fa-brands fa-whatsapp fs-4 flex-shrink-0"></i>
+                                            <span>(+94) 077 376 8767</span>
+                                        </a>
+                                        <a href="mailto:info@nursingcare.lk" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
                                             <i class="rtmicon rtmicon-envelope fs-4 flex-shrink-0"></i>
-                                            <span style="font-size: 13px;">candkhomenursing17@gmail.com</span>
+                                            <span>info@nursingcare.lk</span>
                                         </a>
                                         <a href="https://nursingcare.lk" target="_blank" rel="noopener noreferrer" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
                                             <i class="rtmicon rtmicon-globe fs-4 flex-shrink-0"></i>
