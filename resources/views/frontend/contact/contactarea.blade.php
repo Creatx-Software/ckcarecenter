@@ -91,17 +91,37 @@
                         <div class="d-flex flex-column gap-3 h-100">
                             <img src="assets/image/contact/jpg.avif" class="img-fluid h-100 rounded-4" alt="">
                             <div class="d-flex flex-column gap-3">
-                                <div class="d-flex flex-row align-items-center font-2 gap-3">
-                                    <i class="rtmicon rtmicon-location fs-4"></i>
-                                    <span>No 50, Kudamaduwa Road, Siddamull, Piliyandala, Kesbewa, Sri Lanka</span>
+                                <div class="d-flex flex-row align-items-start font-2 gap-3">
+                                    <i class="rtmicon rtmicon-location fs-4 mt-1"></i>
+                                    <div class="d-flex flex-column gap-1">
+                                        <div>
+                                            <small class="text-muted fw-semibold">Head Office</small><br>
+                                            <span>50, Kudamaduwa Road, Piliyandala, Sri Lanka</span>
+                                        </div>
+                                        <div>
+                                            <small class="text-muted fw-semibold">Branch Office</small><br>
+                                            <span>Pannipitiya</span>
+                                        </div>
+                                        <div>
+                                            <small class="text-muted fw-semibold">Branch Office</small><br>
+                                            <span>17/1, Gnanawimala Mawatha, Walgama, Athurugiriya, Sri Lanka</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="d-flex flex-row align-items-center font-2 gap-3">
-                                    <i class="rtmicon rtmicon-classic-phone  fs-4"></i>
-                                    <a href="tel:0773768767" class="text-decoration-none" style="color: inherit !important;">077 376 8767</a>
+                                    <i class="rtmicon rtmicon-classic-phone fs-4"></i>
+                                    <div class="d-flex flex-column">
+                                        <a href="tel:+94773768767" class="text-decoration-none" style="color: inherit !important;">(+94) 077 376 8767</a>
+                                        <a href="tel:+94706768767" class="text-decoration-none" style="color: inherit !important;">(+94) 070 6768767</a>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-center font-2 gap-3">
+                                    <i class="fa-brands fa-whatsapp fs-4"></i>
+                                    <a href="https://wa.me/94773768767" target="_blank" rel="noopener noreferrer" class="text-decoration-none" style="color: inherit !important;">(+94) 077 376 8767 (WhatsApp / Viber)</a>
                                 </div>
                                 <div class="d-flex flex-row align-items-center font-2 gap-3">
                                     <i class="rtmicon rtmicon-envelope fs-4"></i>
-                                    <a href="mailto:candkhomenursing17@gmail.com" class="text-decoration-none" style="color: inherit !important;">candkhomenursing17@gmail.com</a>
+                                    <a href="mailto:info@nursingcare.lk" class="text-decoration-none" style="color: inherit !important;">info@nursingcare.lk</a>
                                 </div>
                                 <div class="d-flex flex-row align-items-center font-2 gap-3">
                                     <i class="rtmicon rtmicon-globe fs-4"></i>
