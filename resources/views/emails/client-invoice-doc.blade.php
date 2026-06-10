@@ -364,7 +364,7 @@
             <p>
                 <a href="https://nursingcare.lk">nursingcare.lk</a>
                 &nbsp;&bull;&nbsp; 077 376 8767
-                &nbsp;&bull;&nbsp; candkhomenursing17@gmail.com
+                &nbsp;&bull;&nbsp; info@nursingcare.lk
             </p>
             <p style="margin-top:6px;">&copy; {{ date('Y') }} C & K Home Nursing and Care Center. All rights reserved.</p>
         </div>

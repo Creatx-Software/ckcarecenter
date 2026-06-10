@@ -163,7 +163,7 @@
                 
                 <div style="background: #fffbeb; border-left: 4px solid #fbbf24; padding: 30px 40px; margin: 40px 0;">
                     <p style="color: #92400e; font-size: 16px; margin: 0; font-weight: 600;">
-                        To exercise these rights, please contact us at candkhomenursing17@gmail.com
+                        To exercise these rights, please contact us at info@nursingcare.lk
                     </p>
                 </div>
             </div>
@@ -230,7 +230,7 @@
                 </div>
                 <div style="text-align: center; padding: 30px 20px; background: #ffffff; border-radius: 8px; border: 1px solid #e8eef5;">
                     <div style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #1e3a8a; margin-bottom: 12px;">EMAIL</div>
-                    <div style="font-size: 16px; color: #2d3748; font-weight: 500;">candkhomenursing17@gmail.com</div>
+                    <div style="font-size: 16px; color: #2d3748; font-weight: 500;">info@nursingcare.lk</div>
                 </div>
                 <div style="text-align: center; padding: 30px 20px; background: #ffffff; border-radius: 8px; border: 1px solid #e8eef5;">
                     <div style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #1e3a8a; margin-bottom: 12px;">PHONE</div>

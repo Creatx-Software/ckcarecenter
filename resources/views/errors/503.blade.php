@@ -31,8 +31,8 @@
 
                     <div class="helpful-info">
                         <p class="helpful-label">Need urgent assistance?</p>
-                        <a href="mailto:candkhomenursing17@gmail.com" class="helpful-link">
-                            <i class="fas fa-envelope"></i> candkhomenursing17@gmail.com
+                        <a href="mailto:info@nursingcare.lk" class="helpful-link">
+                            <i class="fas fa-envelope"></i> info@nursingcare.lk
                         </a>
                     </div>
                 </div>
