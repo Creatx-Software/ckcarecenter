@@ -164,7 +164,7 @@
                 <h6 class="accent-color m-0">Recognition</h6>
             </div>
             <h3>Awards &amp; Recognition</h3>
-            <p>Honoured for excellence and entrepreneurship — a reflection of our commitment to quality healthcare in Sri Lanka.</p>
+            <p>Honoured for excellence and entrepreneurship - a reflection of our commitment to quality healthcare in Sri Lanka.</p>
         </div>
 
         {{-- Main Block --}}
