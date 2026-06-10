@@ -82,7 +82,7 @@ class ExitPopupController extends Controller
             ];
 
             // Get admin email
-            $adminEmail = env('CONTACT_FORM_RECIPIENT', 'carethree65@gmail.com');
+            $adminEmail = env('CONTACT_FORM_RECIPIENT', 'info@nursingcare.lk');
             
             Log::info('Attempting to send ADMIN email', ['to' => $adminEmail]);
             
