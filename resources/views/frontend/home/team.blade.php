@@ -18,13 +18,13 @@
                         @foreach($teamMembers as $member)
                         <div class="swiper-slide">
                             <div class="card class-card card-overlay gap-3">
-                                <div class="card-image overflow-hidden rounded-4 position-relative">
+                                <div class="card-image overflow-hidden rounded-4 position-relative" style="aspect-ratio: 3 / 4;">
                                     @if($member->image_path)
                                         <img src="{{ Storage::disk('team_img')->url($member->image_path) }}"
-                                             alt="{{ $member->name }}" class="img-fluid">
+                                             alt="{{ $member->name }}" class="img-fluid w-100 h-100" style="object-fit: cover;">
                                     @else
                                         <img src="{{ asset('assets/image/team/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.avif') }}"
-                                             alt="{{ $member->name }}" class="img-fluid">
+                                             alt="{{ $member->name }}" class="img-fluid w-100 h-100" style="object-fit: cover;">
                                     @endif
 
                                     <div class="card-footer border-0 bg-white position-absolute bottom-0 start-0 end-0 rounded-3"
