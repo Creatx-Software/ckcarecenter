@@ -122,4 +122,9 @@ class DayPackageResource extends Resource
             // Removed 'view' to avoid error – add later if needed with: php artisan make:filament-page ViewDayPackage --resource=DayPackageResource --type=view-record
         ];
     }
+
+    public static function canViewAny(): bool
+    {
+        return auth()->user()?->hasRole('admin') ?? false;
+    }
 }
