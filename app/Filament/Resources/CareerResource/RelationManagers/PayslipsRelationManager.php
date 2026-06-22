@@ -11,6 +11,7 @@ use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Validation\Rules\Unique;
 
 class PayslipsRelationManager extends RelationManager
 {
@@ -39,7 +40,19 @@ class PayslipsRelationManager extends RelationManager
                                 12 => 'December',
                             ])
                             ->required()
-                            ->default(now()->month),
+                            ->default(now()->month)
+                            ->live()
+                            ->unique(
+                                table: 'payslips',
+                                column: 'month',
+                                ignoreRecord: true,
+                                modifyRuleUsing: fn (Unique $rule, Forms\Get $get) => $rule
+                                    ->where('career_id', $this->getOwnerRecord()->id)
+                                    ->where('year', $get('year')),
+                            )
+                            ->validationMessages([
+                                'unique' => 'A payslip already exists for this staff member for the selected month and year.',
+                            ]),
 
                         Forms\Components\TextInput::make('year')
                             ->label('Year')
@@ -47,7 +60,19 @@ class PayslipsRelationManager extends RelationManager
                             ->required()
                             ->default(now()->year)
                             ->minValue(2020)
-                            ->maxValue(2050),
+                            ->maxValue(2050)
+                            ->live()
+                            ->unique(
+                                table: 'payslips',
+                                column: 'year',
+                                ignoreRecord: true,
+                                modifyRuleUsing: fn (Unique $rule, Forms\Get $get) => $rule
+                                    ->where('career_id', $this->getOwnerRecord()->id)
+                                    ->where('month', $get('month')),
+                            )
+                            ->validationMessages([
+                                'unique' => 'A payslip already exists for this staff member for the selected month and year.',
+                            ]),
 
                         Forms\Components\DatePicker::make('payment_date')
                             ->label('Payment Date')
@@ -66,6 +91,7 @@ class PayslipsRelationManager extends RelationManager
                                     ->required()
                                     ->default(fn () => $this->getOwnerRecord()->salary ?? 0)
                                     ->live()
+                                    ->afterStateHydrated(fn (Forms\Set $set, Forms\Get $get) => self::updateTotals($set, $get))
                                     ->afterStateUpdated(fn ($state, Forms\Set $set, Forms\Get $get) => self::updateTotals($set, $get)),
 
                                 Forms\Components\TextInput::make('allowances')
@@ -90,6 +116,7 @@ class PayslipsRelationManager extends RelationManager
                                     ->prefix('LKR')
                                     ->default(0)
                                     ->live()
+                                    ->afterStateHydrated(fn (Forms\Set $set, Forms\Get $get) => self::updateTotals($set, $get))
                                     ->afterStateUpdated(fn ($state, Forms\Set $set, Forms\Get $get) => self::updateTotals($set, $get)),
                             ]),
 
@@ -128,6 +155,7 @@ class PayslipsRelationManager extends RelationManager
                                     ->prefix('LKR')
                                     ->default(0)
                                     ->live()
+                                    ->afterStateHydrated(fn (Forms\Set $set, Forms\Get $get) => self::updateTotals($set, $get))
                                     ->afterStateUpdated(fn ($state, Forms\Set $set, Forms\Get $get) => self::updateTotals($set, $get)),
                             ]),
 
@@ -183,6 +211,24 @@ class PayslipsRelationManager extends RelationManager
 
         $netSalary = $grossSalary - $totalDeductions;
         $set('net_salary', number_format($netSalary, 2, '.', ''));
+    }
+
+    protected static function computeTotals(array $data): array
+    {
+        $grossSalary = (float) ($data['basic_salary'] ?? 0)
+            + (float) ($data['allowances'] ?? 0)
+            + (float) ($data['overtime'] ?? 0)
+            + (float) ($data['bonus'] ?? 0);
+
+        $totalDeductions = (float) ($data['epf_employee'] ?? 0)
+            + (float) ($data['tax'] ?? 0)
+            + (float) ($data['other_deductions'] ?? 0);
+
+        $data['gross_salary'] = number_format($grossSalary, 2, '.', '');
+        $data['total_deductions'] = number_format($totalDeductions, 2, '.', '');
+        $data['net_salary'] = number_format($grossSalary - $totalDeductions, 2, '.', '');
+
+        return $data;
     }
 
     public function table(Table $table): Table
@@ -255,7 +301,7 @@ class PayslipsRelationManager extends RelationManager
                 Tables\Actions\CreateAction::make()
                     ->mutateFormDataUsing(function (array $data): array {
                         $data['generated_by'] = auth()->id();
-                        return $data;
+                        return static::computeTotals($data);
                     }),
             ])
             ->actions([
@@ -287,7 +333,8 @@ class PayslipsRelationManager extends RelationManager
                         }
                     }),
 
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->mutateFormDataUsing(fn (array $data): array => static::computeTotals($data)),
 
                 Tables\Actions\DeleteAction::make()
                     ->visible(fn (Payslip $record) => $record->status === 'draft'),

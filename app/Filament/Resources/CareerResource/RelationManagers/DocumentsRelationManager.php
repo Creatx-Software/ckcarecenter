@@ -115,7 +115,7 @@ class DocumentsRelationManager extends RelationManager
                 Tables\Actions\CreateAction::make()
                     ->mutateFormDataUsing(function (array $data): array {
                         $data['uploaded_by'] = auth()->id();
-                        return $data;
+                        return static::attachFileMetadata($data);
                     }),
             ])
             ->actions([
@@ -126,7 +126,8 @@ class DocumentsRelationManager extends RelationManager
                     ->action(function ($record) {
                         return Storage::disk('public')->download($record->file_path, $record->document_name);
                     }),
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->mutateFormDataUsing(fn (array $data): array => static::attachFileMetadata($data)),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
@@ -138,5 +139,16 @@ class DocumentsRelationManager extends RelationManager
             ->emptyStateHeading('No documents uploaded')
             ->emptyStateDescription('Upload employment contracts, certificates, and other documents for this career staff.')
             ->emptyStateIcon('heroicon-o-document');
+    }
+
+    protected static function attachFileMetadata(array $data): array
+    {
+        if (! empty($data['file_path']) && Storage::disk('public')->exists($data['file_path'])) {
+            $data['file_name'] = basename($data['file_path']);
+            $data['file_size'] = Storage::disk('public')->size($data['file_path']);
+            $data['mime_type'] = Storage::disk('public')->mimeType($data['file_path']);
+        }
+
+        return $data;
     }
 }
