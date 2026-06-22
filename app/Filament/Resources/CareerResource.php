@@ -66,7 +66,7 @@ class CareerResource extends Resource
                             ->reactive()
                             ->afterStateUpdated(function ($state, callable $set) {
                                 if ($state) {
-                                    $set('age', now()->diffInYears($state));
+                                    $set('age', now()->diffInYears($state, true));
                                 }
                             }),
                         Forms\Components\TextInput::make('age')
