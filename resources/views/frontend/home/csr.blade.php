@@ -175,7 +175,7 @@
                              alt="Corporate Social Responsibility"
                              loading="lazy">
                         <div class="csr-img-overlay-badge">
-                            <p style="font-size:13px;font-weight:600;margin:0;line-height:1.5;">
+                            <p style="font-size:13px;font-weight:600;margin:0;line-height:1.5;color:#fff;">
                                 <i class="fa-solid fa-heart" style="color:var(--accent-color);margin-right:6px;"></i>
                                 Committed to uplifting lives and strengthening communities across Sri Lanka.
                             </p>
