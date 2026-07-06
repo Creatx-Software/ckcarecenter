@@ -1376,7 +1376,7 @@ a {
 .floating-counter {
     position: relative;
     margin-top: -6rem;
-    z-index: 9999;
+    z-index: 10;
 }
 
 .floating-blog {
@@ -2660,7 +2660,7 @@ a {
     .floating-counter {
         position: relative;
         margin-top: -5rem;
-        z-index: 9999;
+        z-index: 10;
     }
 
     .floating-blog {
