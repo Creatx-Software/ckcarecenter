@@ -1151,6 +1151,12 @@ a {
     overflow: hidden;
 }
 
+.customer-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .testimonial-item {
     border-radius: 50%;
     aspect-ratio: 1/1;

@@ -67,7 +67,7 @@
                             <div class="floating-top w-100">
                                 <img src="{{ asset('assets/image/testimonials/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.avif') }}" alt="Healthcare professional" class="img-fluid w-100">
                             </div>
-                            <div class="floating-bottom-1" style="z-index: 4;">
+                            <div class="floating-bottom-1" style="display:none;">
                                 <div class="d-flex flex-column align-items-center justify-content-center gap-3 bg-accent-primary p-4 rounded-3">
                                     <div class="d-flex flex-row customer-container">
                                         <div class="customer-item">
