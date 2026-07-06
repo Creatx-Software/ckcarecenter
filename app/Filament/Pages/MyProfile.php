@@ -24,14 +24,6 @@ class MyProfile extends Page implements Forms\Contracts\HasForms
 
     public ?array $data = [];
 
-    /**
-     * Only show to users who are not admin/manager
-     */
-    public static function shouldRegisterNavigation(): bool
-    {
-        return !auth()->user()->canManageUsers();
-    }
-
     public function mount(): void
     {
         $this->form->fill([
@@ -52,7 +44,7 @@ class MyProfile extends Page implements Forms\Contracts\HasForms
                         Forms\Components\TextInput::make('email')
                             ->email()
                             ->required()
-                            ->unique(ignoreRecord: true, table: 'users', column: 'email')
+                            ->unique(table: 'users', column: 'email', ignorable: auth()->user())
                             ->maxLength(255),
                     ])
                     ->columns(2),
@@ -62,18 +54,20 @@ class MyProfile extends Page implements Forms\Contracts\HasForms
                         Forms\Components\TextInput::make('current_password')
                             ->password()
                             ->label('Current Password')
-                            ->required()
+                            ->nullable()
+                            ->requiredWith('new_password')
                             ->rules(['current_password']),
                         Forms\Components\TextInput::make('new_password')
                             ->password()
                             ->label('New Password')
-                            ->required()
+                            ->nullable()
                             ->minLength(8)
                             ->same('new_password_confirmation'),
                         Forms\Components\TextInput::make('new_password_confirmation')
                             ->password()
                             ->label('Confirm New Password')
-                            ->required()
+                            ->nullable()
+                            ->requiredWith('new_password')
                             ->minLength(8),
                     ])
                     ->columns(1)
