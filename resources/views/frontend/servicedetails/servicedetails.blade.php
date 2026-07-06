@@ -5,19 +5,16 @@
     .sd-sidebar         { flex:1; min-width:0; }
     .sd-sticky          { position:sticky; top:100px; }
     .sd-why-grid        { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px; }
-    .sd-hero-img        { height:280px; }
 
     @media (max-width: 991px) {
         .sd-layout       { flex-direction:column; gap:32px; }
         .sd-sidebar      { width:100%; }
         .sd-sticky       { position:static; }
         .sd-why-grid     { grid-template-columns:1fr 1fr; }
-        .sd-hero-img     { height:220px; }
     }
 
     @media (max-width: 575px) {
         .sd-why-grid     { grid-template-columns:1fr; }
-        .sd-hero-img     { height:180px; }
         .sd-cta-strip    { flex-direction:column; align-items:flex-start !important; }
         .sd-layout       { padding-left:16px; padding-right:16px; }
     }
@@ -40,8 +37,7 @@
                 <div style="border-radius:12px;overflow:hidden;margin-bottom:28px;">
                     <img src="{{ $imgSrc }}"
                          alt="{{ $service->title }}"
-                         class="sd-hero-img"
-                         style="width:100%;object-fit:cover;display:block;"
+                         style="width:100%;height:auto;display:block;"
                          onerror="this.onerror=null;this.src='{{ asset('assets/image/services/service_card_1_2.jpg') }}'">
                 </div>
 
