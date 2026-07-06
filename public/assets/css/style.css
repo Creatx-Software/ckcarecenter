@@ -1591,9 +1591,9 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--accent-color);
+    color: #ffffff;
     background-color: transparent;
-    border: 1px solid var(--accent-color);
+    border: 1px solid #ffffff;
 }
 
 .social-container.accent .social-item {

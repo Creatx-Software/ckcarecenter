@@ -15,11 +15,11 @@
                     <div class="col col-xl-4 mb-3">
                         <div class="row row-cols-xl-2 row-cols-1">
                             <div class="co mb-2 text-start">
-                                <div class="d-flex flex-column gap-1" style="text-align: left !important;">
+                                <div class="d-flex flex-column gap-1" style="text-align: left !important; align-items: flex-start !important; justify-content: flex-start !important;">
                                     <h4 style="text-align: left !important;">Address</h4>
                                     <div class="d-flex flex-row font-2 gap-2 align-items-start">
                                         <i class="rtmicon rtmicon-location fs-4 flex-shrink-0 mt-1"></i>
-                                        <div class="d-flex flex-column gap-1" style="text-align: left;">
+                                        <div class="d-flex flex-column gap-1" style="text-align: left !important; align-items: flex-start !important; justify-content: flex-start !important;">
                                             <div>
                                                 <small class="opacity-75 fw-semibold">Head Office</small><br>
                                                 <span>50, Kudamaduwa Road, Piliyandala, Sri Lanka</span>
@@ -49,9 +49,9 @@
                                 </div>
                             </div>
                             <div class="col mb-2 text-start">
-                                <div class="d-flex flex-column gap-1" style="text-align: left !important;">
+                                <div class="d-flex flex-column gap-1" style="text-align: left !important; align-items: flex-start !important; justify-content: flex-start !important;">
                                     <h4 style="text-align: left !important;">Contact Us</h4>
-                                    <div class="d-flex flex-column gap-1">
+                                    <div class="d-flex flex-column gap-1" style="align-items: flex-start !important; justify-content: flex-start !important;">
                                         <a href="tel:+94773768767" class="d-flex flex-row align-items-center justify-content-start font-2 gap-2 text-white text-decoration-none">
                                             <i class="rtmicon rtmicon-classic-phone fs-4 flex-shrink-0"></i>
                                             <span>(+94) 077 376 8767</span>
