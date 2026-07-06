@@ -187,6 +187,11 @@
                     <div class="lf-field-error" id="err-timeline"></div>
                 </div>
 
+                <div class="lf-field">
+                    <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.site_key') }}"></div>
+                    <div class="lf-field-error" id="err-cf-turnstile-response"></div>
+                </div>
+
                 <button type="submit" class="lf-btn" id="leadBtn">
                     <span class="btn-text">Get My Free Care Plan</span>
                     <span class="btn-loader">
@@ -246,6 +251,16 @@ document.getElementById('leadForm').addEventListener('submit', function (e) {
         msg.textContent = 'Network error. Please try again.';
         msg.style.display = 'block';
     })
-    .finally(function() { btn.disabled = false; });
+    .finally(function() {
+        btn.disabled = false;
+        var widget = document.querySelector('#leadForm .cf-turnstile');
+        if (widget && window.turnstile) {
+            window.turnstile.reset(widget);
+        }
+    });
 });
 </script>
+
+@push('scripts')
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+@endpush

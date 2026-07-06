@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use App\Models\ContactMessage;
@@ -22,12 +23,27 @@ class ContactController extends Controller
         try {
             // Validate the form data
             $validated = $request->validate([
-                'name'    => 'required|string|max:255',
-                'email'   => 'required|email|max:255',
-                'number'  => 'required|string|max:20',
-                'subject' => 'required|string|max:255',
-                'message' => 'required|string|max:5000',
+                'name'                => 'required|string|max:255',
+                'email'               => 'required|email|max:255',
+                'number'              => 'required|string|max:20',
+                'subject'             => 'required|string|max:255',
+                'message'             => 'required|string|max:5000',
+                'cf-turnstile-response' => 'required|string',
             ]);
+
+            // Verify Cloudflare Turnstile token
+            $turnstileResponse = Http::asForm()->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+                'secret'   => config('services.turnstile.secret_key'),
+                'response' => $validated['cf-turnstile-response'],
+                'remoteip' => $request->ip(),
+            ]);
+
+            if (! $turnstileResponse->json('success', false)) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Captcha verification failed. Please try again.',
+                ], 422);
+            }
 
             // Save to database
             $message = ContactMessage::create([

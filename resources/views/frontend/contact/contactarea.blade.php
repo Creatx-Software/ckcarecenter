@@ -77,6 +77,9 @@
                                         The field is required.
                                     </div>
                                 </div>
+                                <div class="mb-3">
+                                    <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.site_key') }}"></div>
+                                </div>
                                 <div>
                                     <button type="submit" id="contactSubmitBtn"
                                         class="btn submit_form py-3 w-100 d-flex flex-row gap-3 justify-content-center gap-2 rounded-pill">
@@ -173,3 +176,7 @@
                 color: #E6007E;
             }
         </style>
+
+        @push('scripts')
+            <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        @endpush

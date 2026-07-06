@@ -56,6 +56,13 @@ $(function () {
         var errtoast = new bootstrap.Toast($('.error_msg')[0]);
         var formUrl  = $form.attr('action') || 'php/form_process.php';
 
+        function resetTurnstile() {
+            var $widget = $form.find('.cf-turnstile');
+            if ($widget.length && window.turnstile) {
+                window.turnstile.reset($widget[0]);
+            }
+        }
+
         $.ajax({
             type: 'POST',
             url: formUrl,
@@ -72,15 +79,18 @@ $(function () {
                         $submitBtn.prop('disabled', false).html('Send Message');
                         showSuccessModal();
                     }
+                    resetTurnstile();
                 } else {
                     $submitBtn.prop('disabled', false).html('Send Message');
                     $subscribeBtn.prop('disabled', false).html('Subscribe');
+                    resetTurnstile();
                     errtoast.show();
                 }
             },
             error: function () {
                 $submitBtn.prop('disabled', false).html('Send Message');
                 $subscribeBtn.prop('disabled', false).html('Subscribe');
+                resetTurnstile();
                 errtoast.show();
             }
         });

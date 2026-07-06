@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 
@@ -33,17 +34,36 @@ class LeadFormController extends Controller
                 'age' => 'required|integer|min:60|max:120',
                 'care_type' => 'required|string',
                 'timeline' => 'required|string',
+                'cf-turnstile-response' => 'required|string',
             ]);
-            
+
             Log::info('Form validation PASSED', ['validated_data' => $validated]);
         } catch (\Illuminate\Validation\ValidationException $e) {
             Log::error('Validation FAILED', ['errors' => $e->errors()]);
-            
+
             return response()
                 ->json([
                     'success' => false,
                     'message' => 'Validation failed',
                     'errors' => $e->errors()
+                ], 422)
+                ->header('Content-Type', 'application/json');
+        }
+
+        // Verify Cloudflare Turnstile token
+        $turnstileResponse = Http::asForm()->post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+            'secret'   => config('services.turnstile.secret_key'),
+            'response' => $validated['cf-turnstile-response'],
+            'remoteip' => $request->ip(),
+        ]);
+
+        if (! $turnstileResponse->json('success', false)) {
+            Log::error('Turnstile verification FAILED', ['response' => $turnstileResponse->json()]);
+
+            return response()
+                ->json([
+                    'success' => false,
+                    'message' => 'Captcha verification failed. Please try again.',
                 ], 422)
                 ->header('Content-Type', 'application/json');
         }
