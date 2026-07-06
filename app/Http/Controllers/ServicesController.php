@@ -20,7 +20,7 @@ class ServicesController extends Controller
     {
         $services = Service::where('is_public', true)
                           ->orderBy('created_at', 'desc')
-                          ->paginate(9);
+                          ->paginate(15);
         
 
         
