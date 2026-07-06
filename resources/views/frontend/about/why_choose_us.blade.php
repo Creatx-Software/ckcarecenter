@@ -9,7 +9,7 @@
                 <h6 class="accent-color m-0">Why Choose Us</h6>
             </div>
             <h3>Care That Goes Beyond the Ordinary</h3>
-            <p>We combine clinical expertise with genuine compassion — giving every resident and their family
+            <p>We combine clinical expertise with genuine compassion - giving every resident and their family
                 the confidence that they are in truly capable, caring hands.</p>
         </div>
 

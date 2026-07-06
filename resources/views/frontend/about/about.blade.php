@@ -18,22 +18,71 @@
                                     we tailor our services to each client's unique needs. Recognised with the Asia Miracle
                                     People's Excellency Award and The Entrepreneur Biz Award 2024, our commitment to quality is industry-acknowledged.
                                 </p>
-                                <div class="d-flex flex-row gap-4 mt-2">
-                                    <div class="d-flex flex-column align-items-center">
-                                        <h3 class="accent-color m-0 fw-bold">Est. 2016</h3>
-                                        <span class="text-muted" style="font-size:13px;">Since June 2016</span>
+                                <style>
+                                    .about-stats-row {
+                                        display: flex;
+                                        align-items: stretch;
+                                        margin-top: 0.75rem;
+                                    }
+                                    .about-stats-row .about-stat-item {
+                                        flex: 1 1 0;
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 2px;
+                                        padding: 0 20px;
+                                        text-align: left;
+                                    }
+                                    .about-stats-row .about-stat-item:first-child {
+                                        padding-left: 0;
+                                    }
+                                    .about-stats-row .about-stat-item + .about-stat-item {
+                                        border-left: 1px solid #E5E5E5;
+                                    }
+                                    .about-stats-row .about-stat-number {
+                                        margin: 0;
+                                        font-size: 22px;
+                                        font-weight: 600;
+                                        line-height: 1.2;
+                                        color: var(--accent-color, #E6007E);
+                                    }
+                                    .about-stats-row .about-stat-label {
+                                        font-size: 12.5px;
+                                        font-weight: 400;
+                                        color: #999999;
+                                    }
+                                    @media (max-width: 575.98px) {
+                                        .about-stats-row {
+                                            flex-wrap: wrap;
+                                            row-gap: 16px;
+                                        }
+                                        .about-stats-row .about-stat-item {
+                                            flex: 1 1 33.333%;
+                                            padding: 0 10px;
+                                        }
+                                        .about-stats-row .about-stat-number {
+                                            font-size: 18px;
+                                        }
+                                        .about-stats-row .about-stat-label {
+                                            font-size: 11px;
+                                        }
+                                    }
+                                </style>
+                                <div class="about-stats-row">
+                                    <div class="about-stat-item">
+                                        <h3 class="about-stat-number">Est. 2016</h3>
+                                        <span class="about-stat-label">Since June 2016</span>
                                     </div>
-                                    <div class="d-flex flex-column align-items-center">
-                                        <h3 class="accent-color m-0 fw-bold">500+</h3>
-                                        <span class="text-muted" style="font-size:13px;">Clients Served</span>
+                                    <div class="about-stat-item">
+                                        <h3 class="about-stat-number">500+</h3>
+                                        <span class="about-stat-label">Clients Served</span>
                                     </div>
-                                    <div class="d-flex flex-column align-items-center">
-                                        <h3 class="accent-color m-0 fw-bold">24/7</h3>
-                                        <span class="text-muted" style="font-size:13px;">Care Available</span>
+                                    <div class="about-stat-item">
+                                        <h3 class="about-stat-number">24/7</h3>
+                                        <span class="about-stat-label">Care Available</span>
                                     </div>
                                 </div>
                             </div>
-                            <img src="{{ asset('assets/image/about/Untitled-1.jpg') }}" class="img-fluid rounded-4" alt="C & K Home Nursing Caregiver" style="max-height:400px; object-fit:cover; width:100%;">
+                            <img src="{{ asset('assets/image/about/Untitled-1.jpg') }}" class="img-fluid rounded-4" alt="C & K Home Nursing Caregiver" style="max-height:400px; object-fit:cover; width:100%; loading:lazy; display:none;">
                         </div>
                     </div>
                     <div class="col col-xl-5 mb-3 scrollanimation animated fadeInRight">
@@ -73,7 +122,7 @@
                                 </div>
                             </div>
                             <div
-                                class="d-flex flex-xl-row flex-column gap-3 align-items-center bg-accent w-max-content p-3 rounded-4">
+                                class=" flex-xl-row flex-column gap-3 align-items-center bg-accent w-max-content p-3 rounded-4" style="display:none;">
                                 <div class="d-flex flex-row customer-container">
                                     <div class="customer-item">
                                         <img src="{{ asset('assets/image/about/about-team.jpg') }}" class="img-fluid" alt="Care Team Member" style="object-fit:cover;">
