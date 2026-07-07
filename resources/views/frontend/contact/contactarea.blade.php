@@ -2,7 +2,7 @@
             <div class="r-container d-flex flex-column gap-3">
                 <div class="row row-cols-xl-2 row-cols-1">
                     <div class="col col-xl-7 mb-3 scrollanimation animated fadeInLeft">
-                        <div class="d-flex flex-column gap-3 w-100 px-5 pe-5 bg-accent-color-3">
+                        <div class="d-flex flex-column gap-3 w-100 px-5 pe-5 bg-accent-color-3 contact-form-wrap">
                             <div class="pe-5">
                                 <div class="d-flex flex-column gap-3 bg-accent-primary p-4"
                                     style="border-bottom-right-radius: 20px; margin-left: -3rem;">
@@ -77,8 +77,8 @@
                                         The field is required.
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.site_key') }}"></div>
+                                <div class="mb-3 turnstile-wrap">
+                                    <div class="cf-turnstile w-100" data-sitekey="{{ config('services.turnstile.site_key') }}" data-size="flexible"></div>
                                 </div>
                                 <div>
                                     <button type="submit" id="contactSubmitBtn"
@@ -174,6 +174,36 @@
 
             #contactSubmitBtn:hover{
                 color: #E6007E;
+            }
+
+            /* Turnstile's flexible mode stretches to fill its container; on wide
+               desktop columns that leaves a large empty gap, so cap it to its
+               natural widget width there. Mobile keeps full width (handled below)
+               since narrow screens need every bit of room. */
+            @media (min-width: 577px) {
+                .cf-turnstile {
+                    max-width: 300px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .contact-form-wrap {
+                    padding-left: 1.25rem !important;
+                    padding-right: 1.25rem !important;
+                }
+
+                /* Turnstile's flexible widget has a ~300px hard minimum width.
+                   Break it out of the card padding so narrow phones still have
+                   enough room; overflow-x is just a fallback for the smallest screens
+                   so nothing ever gets clipped. */
+                .turnstile-wrap {
+                    margin-left: -1.25rem;
+                    margin-right: -1.25rem;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
             }
         </style>
 
