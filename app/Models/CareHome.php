@@ -15,6 +15,9 @@ class CareHome extends Model
         'title',
         'subtitle',
         'location',
+        'address',
+        'map_embed_url',
+        'sort_order',
         'description',
         'image_path',
         'contact_no',
@@ -24,5 +27,19 @@ class CareHome extends Model
 
     protected $casts = [
         'is_public' => 'boolean',
+        'sort_order' => 'integer',
     ];
+
+    /**
+     * Allow pasting either the bare embed URL or the full <iframe> snippet
+     * Google Maps' "Embed a map" gives you — only the src="..." URL is stored.
+     */
+    public function setMapEmbedUrlAttribute(?string $value): void
+    {
+        if ($value && preg_match('/src="([^"]+)"/i', $value, $matches)) {
+            $value = $matches[1];
+        }
+
+        $this->attributes['map_embed_url'] = $value;
+    }
 }

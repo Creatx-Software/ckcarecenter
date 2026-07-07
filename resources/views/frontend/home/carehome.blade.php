@@ -18,6 +18,7 @@
         overflow: hidden;
         width: 200px;
         min-width: 200px;
+        height: 200px;
         flex-shrink: 0;
     }
     .ch-card-img-wrap img {

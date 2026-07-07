@@ -43,6 +43,13 @@ class CareHomeResource extends Resource
                             ->placeholder('e.g. Tangalle, Matara')
                             ->columnSpan(1),
 
+                        Forms\Components\TextInput::make('sort_order')
+                            ->label('Display Order')
+                            ->numeric()
+                            ->default(0)
+                            ->helperText('Lower numbers show first in the Contact page map tabs.')
+                            ->columnSpan(1),
+
                         Forms\Components\TextInput::make('contact_no')
                             ->label('Contact Number')
                             ->tel()
@@ -61,6 +68,22 @@ class CareHomeResource extends Resource
                             ->columnSpan(1),
                     ])
                     ->columns(2),
+
+                Forms\Components\Section::make('Contact Page Map')
+                    ->description('Used to display this location on the Contact page map tabs.')
+                    ->schema([
+                        Forms\Components\Textarea::make('address')
+                            ->label('Full Address')
+                            ->rows(2)
+                            ->placeholder('e.g. 50, Kudamaduwa Road, Piliyandala, Sri Lanka')
+                            ->columnSpanFull(),
+
+                        Forms\Components\Textarea::make('map_embed_url')
+                            ->label('Google Maps Embed URL')
+                            ->rows(2)
+                            ->helperText('On Google Maps, open the location, click Share > Embed a map, then paste the code here — either the full <iframe> snippet or just the src="..." URL both work.')
+                            ->columnSpanFull(),
+                    ]),
 
                 Forms\Components\Section::make('Description & Image')
                     ->schema([
@@ -111,6 +134,11 @@ class CareHomeResource extends Resource
                 Tables\Columns\TextColumn::make('location')
                     ->searchable()
                     ->sortable(),
+
+                Tables\Columns\TextColumn::make('sort_order')
+                    ->label('Order')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
                 Tables\Columns\TextColumn::make('contact_no')
                     ->label('Contact'),

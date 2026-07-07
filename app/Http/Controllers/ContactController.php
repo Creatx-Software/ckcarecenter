@@ -9,13 +9,19 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use App\Models\ContactMessage;
+use App\Models\CareHome;
 
 class ContactController extends Controller
 {
 
     public function index(): View
     {
-        return view('frontend.contact.index');
+        $branches = CareHome::where('is_public', true)
+            ->orderBy('sort_order')
+            ->orderBy('created_at')
+            ->get();
+
+        return view('frontend.contact.index', compact('branches'));
     }
 
     public function send(Request $request)

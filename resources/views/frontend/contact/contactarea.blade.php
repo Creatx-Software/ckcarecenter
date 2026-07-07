@@ -1,6 +1,6 @@
 <div class="section">
             <div class="r-container d-flex flex-column gap-3">
-                <div class="row row-cols-xl-2 row-cols-1">
+                <div class="row row-cols-xl-2 row-cols-1 align-items-start">
                     <div class="col col-xl-7 mb-3 scrollanimation animated fadeInLeft">
                         <div class="d-flex flex-column gap-3 w-100 px-5 pe-5 bg-accent-color-3 contact-form-wrap">
                             <div class="pe-5">
@@ -97,18 +97,17 @@
                                 <div class="d-flex flex-row align-items-start font-2 gap-3">
                                     <i class="rtmicon rtmicon-location fs-4 mt-1"></i>
                                     <div class="d-flex flex-column gap-1">
+                                        @forelse($branches ?? [] as $index => $branch)
+                                        <div>
+                                            <small class="text-muted fw-semibold">{{ $index === 0 ? 'Head Office' : 'Branch Office' }}</small><br>
+                                            <span>{{ $branch->address ?? $branch->location ?? $branch->title }}</span>
+                                        </div>
+                                        @empty
                                         <div>
                                             <small class="text-muted fw-semibold">Head Office</small><br>
-                                            <span>50, Kudamaduwa Road, Piliyandala, Sri Lanka</span>
+                                            <span>91, Cerculer Road ,Araliya uyana ,Depanama ,Pannipitiya</span>
                                         </div>
-                                        <div>
-                                            <small class="text-muted fw-semibold">Branch Office</small><br>
-                                            <span>Pannipitiya</span>
-                                        </div>
-                                        <div>
-                                            <small class="text-muted fw-semibold">Branch Office</small><br>
-                                            <span>17/1, Gnanawimala Mawatha, Walgama, Athurugiriya, Sri Lanka</span>
-                                        </div>
+                                        @endforelse
                                     </div>
                                 </div>
                                 <div class="d-flex flex-row align-items-center font-2 gap-3">

@@ -22,7 +22,7 @@
                                         <div class="d-flex flex-column gap-1" style="text-align: left !important; align-items: flex-start !important; justify-content: flex-start !important;">
                                             <div>
                                                 <small class="opacity-75 fw-semibold">Head Office</small><br>
-                                                <span>50, Kudamaduwa Road, Piliyandala, Sri Lanka</span>
+                                                <span>91, Cerculer Road Araliya uyana Depanama Pannipitiya</span>
                                             </div>
                                             <div>
                                                 <small class="opacity-75 fw-semibold">Branch Office</small><br>
