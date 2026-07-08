@@ -17,10 +17,10 @@
 
         {{-- Day Package Cards --}}
         @if($dayPackages->isNotEmpty())
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #e5e7eb; border: 1px solid #e5e7eb; border-radius: 14px; overflow: hidden;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
 
             @foreach($dayPackages as $dayPackage)
-            <div style="background: #fff; padding: 2rem 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.25rem; transition: background .15s;"
+            <div style="background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 2rem 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.25rem; flex: 1 1 260px; max-width: 340px; transition: background .15s;"
                  onmouseover="this.style.background='#EEF2F8'"
                  onmouseout="this.style.background='#fff'">
 
