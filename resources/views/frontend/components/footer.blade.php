@@ -27,7 +27,8 @@
                                             <div>
                                                 <small class="opacity-75 fw-semibold">Branch Office</small><br>
                                                 <span>Pannipitiya</span><br>
-                                                <span>Athurugiriya</span>
+                                                <span>Athurugiriya</span><br>
+                                                <span>Matara</span>
                                             </div>
 
                                         </div>
